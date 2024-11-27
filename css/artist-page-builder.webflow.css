@@ -34,7 +34,7 @@
   --base-color-brand--grey-100: #5c677d;
   --base-color-brand--primary-3xdark: #b48c1e;
   --spacer--small: .75rem;
-  --spacer--large: 1.25rem;
+  --base-color-brand--primary-2xdark: #c39a27;
   --base-color-neutral--neutral-lightest: #eee;
   --base-color-neutral--neutral: #666;
   --base-color-brand--primary-5xdark: #896709;
@@ -46,13 +46,13 @@
   --text-color--text-warning: var(--base-color-system--warning-yellow-dark);
   --base-color-brand--primary-4xlight: #fff8e0;
   --spacer--xhuge: 3rem;
+  --spacer--large: 1.25rem;
   --base-color-brand--primary-light: #f2cc65;
   --spacer--xgiant: 8rem;
   --base-color-neutral--neutral-darker: #222;
   --base-color-system--success-green: #cef5ca;
   --spacer--xxhuge: 4rem;
   --spacer--xlarge: 1.5rem;
-  --base-color-brand--primary-2xdark: #c39a27;
   --base-color-neutral--black: #000;
   --base-color-neutral--neutral-darkest: #111;
   --base-color-brand--primary-xlight: #efd794;
@@ -1239,16 +1239,17 @@ figcaption {
   grid-row-gap: var(--spacer--small);
   border-width: 1px;
   border-color: var(--base-color-brand--border);
-  border-radius: var(--spacer--large);
+  border-radius: var(--spacer--medium);
   background-color: var(--base-color-neutral--white);
   color: var(--base-color-brand--primary-4xdark);
+  cursor: pointer;
   font-size: 1.3rem;
+  transition: border-color .25s cubic-bezier(.47, 0, .745, .715), color .25s cubic-bezier(.47, 0, .745, .715), transform .25s cubic-bezier(.47, 0, .745, .715), box-shadow .25s cubic-bezier(.47, 0, .745, .715), background-color .25s cubic-bezier(.47, 0, .745, .715);
 }
 
 .button.is-icon.is-top-bar:hover {
-  background-color: var(--base-color-neutral--white);
+  border-color: var(--base-color-brand--primary-2xdark);
   box-shadow: none;
-  color: var(--base-color-brand--primary);
   transform: none;
 }
 
@@ -4213,7 +4214,7 @@ figcaption {
   justify-content: flex-start;
   align-items: flex-end;
   height: 100vh;
-  display: flex;
+  display: none;
   position: fixed;
   inset: 0% 0% 0% auto;
 }
@@ -4335,6 +4336,10 @@ figcaption {
   flex-flow: column;
   display: flex;
   overflow: hidden;
+}
+
+.container-90vh {
+  height: 90vh;
 }
 
 @media screen and (max-width: 991px) {
